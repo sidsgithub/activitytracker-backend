@@ -13,7 +13,7 @@ router.put('/users',ifExists);
 router.put('/users/password',changePassword);
 
 
-router.get('/user/activity',listActivity);
+router.get('/user/:id/activity',listActivity);
 router.post('/user/activity',createActivity);
 
 

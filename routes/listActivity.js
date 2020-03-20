@@ -2,13 +2,14 @@ const models = require('../models');
 
 const listActivity = async (req, res) => {
     try {
-    //   var id = JSON.parse(req.params.id);
+      var id = JSON.parse(req.params.id);
+      console.log(id)
       const activity = await models.Activity.findAll(
-    //       {
-    //     where: id
-    //   }
+          {
+        where: id
+        }
       );
-      // console.log(req.body.email)
+      console.log(req.body.email)
       return res.status(201).json({
         activity,
       });

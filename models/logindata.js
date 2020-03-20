@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   LoginData.associate = function(models) {
     // associations can be defined here
-    LoginData.hasMany(models.Activity, {as: 'activities'})
+    LoginData.hasMany(models.Activity, { foreignKey: 'loginId', sourceKey: 'id' ,as: 'activities'})
   };
   return LoginData;
 };
